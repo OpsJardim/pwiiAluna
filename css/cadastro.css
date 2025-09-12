@@ -1,18 +1,27 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(224, 224, 224);
+    font-weight: bold;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 label{
-    display: block;
+    display: flex;
     padding: 5px;
     margin-top: 10px;
     margin-right: 5px;
-}
-
-body{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(243, 226, 226);
-    font-weight: bold;
+    border-radius: 25px;
 }
 
 .cadastro{
     font-weight: bold;
+    font-size: medium;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(0, 0, 0);
 }
@@ -29,7 +38,10 @@ form{
 }
 
 button{
-    display: block;
+    display: flex;
     padding: 5px;
     margin-top: 10%;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #f3b9ff;
 }

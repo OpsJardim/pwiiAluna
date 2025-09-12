@@ -19,10 +19,6 @@ class Aluno{
         } catch (\Throwable $th) {
             return false;
         }
-
-
-
-
     }
 
     public function getId(){

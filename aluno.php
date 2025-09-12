@@ -15,4 +15,4 @@ if($con) {
     }
 }else{
     echo"<script>alert('sem conexao com o banco.tente mais tarde!')</script>";
-}
+}                                                                                                                                                                                                     
