@@ -1,0 +1,35 @@
+label{
+    display: block;
+    padding: 5px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(243, 226, 226);
+    font-weight: bold;
+}
+
+.cadastro{
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+form{
+    display: block;
+    background-color: rgb(243, 238, 238);
+    margin-top: 10%;
+    margin-left: 40%;
+    padding: 30px;
+    border-radius: 3px;
+    width: 300px;
+    box-shadow: 4px 12px #f3b9ff;
+}
+
+button{
+    display: block;
+    padding: 5px;
+    margin-top: 10%;
+}

@@ -9,7 +9,7 @@ if($con) {
     $al = $aluno->consulta("dudajsousa@gmail.com");
     // cadastrar($rm,$nome,$email,$cpf)
     if(!$al){
-        $aluno->cadastrar(4657,"gustavo portela de lima","dudajsousa@gmail.com","123-456-789-10");    
+        $aluno->cadastrar(4657,"Maria Eduarda Jardim Sousa","dudajsousa@gmail.com","123-456-789-10");    
     }else{
         echo"<script>alert('Esse aluno já está cadastrado!!')</script>";
     }
