@@ -1,32 +1,24 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="css/cadastro.css">
-</head>
-<body>
-    
+<?php
+require "Aluno.class.php";
 
-    <form action="cadastro.php" method="post">
-        
-        <div class="cadastro">Cadastro de Aluno</div>
+if ($_SERVER['REQUEST_METHOD']== 'POST'){
+    $rm = $_POST['rm'] ?? '';
+    $nome = $_POST['nome'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $cpf = $_POST['cpf'] ?? '';
 
-        <label for="rm">RM</label>
-        <input type="numbero" id="rm" name="Registro de Matrícula" placeholder="Digite seu rm">
+    $aluno = new Aluno();
 
-        <label for="nome">Nome</label>
-        <input type="text"  id="nome" name="Nome" placeholder="Digite seu nome">
+    if($aluno->conectar()){
+        //verifica se já existe cadastro nesse email
+            if ($aluno->cadastrar($rm,$nome,$email,$cpf)) {
+                echo "<script>alert('Cadastro realizado com sucesso!'); window.location.href=index.html;</script>";
+            } else {
+                echo "<script>alert('Erro ao cadastrar. Tente novamente.'); window.history.back();</script>";
+            }
 
-        <label for="email">Email</label>
-        <input type="text" id="email" name="Email" placeholder="Digite seu email">
-
-        <label for="cpf">CPF</label>
-        <input type="numero" id="cpf" name="CPF" placeholder="Digite seu CPF">
-
-        <button type="button">Cadastrar</button>
-    </form>
-
-</body>
-</html>
+    } else {
+        echo "<script>alert('Erro na conexão com o banco de dados.'); window.history.back();</script>";
+    }
+}
+?>

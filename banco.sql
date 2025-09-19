@@ -1,5 +1,6 @@
-create database etimpwiiAluno;
-use etimpwiiAluno;
+drop database etimpwiialuno;
+create database EtimPwiiAluno;
+use EtimPwiiAluno;
 
 create table aluno(
     id int primary key auto_increment,
