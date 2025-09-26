@@ -16,6 +16,7 @@
         <input type="number" id="rm" name="rm" placeholder="Digite seu RM">
         <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
         <input type="text" id="email" name="email" placeholder="Digite seu email">
+        <input type="text" id="senha" name="senha" placeholder="Digite sua senha">
         <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF">
 
 

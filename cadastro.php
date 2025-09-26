@@ -6,12 +6,13 @@ if ($_SERVER['REQUEST_METHOD']== 'POST'){
     $nome = $_POST['nome'] ?? '';
     $email = $_POST['email'] ?? '';
     $cpf = $_POST['cpf'] ?? '';
+    $senha = $_POST['senha']?? '';
 
     $aluno = new Aluno();
 
     if($aluno->conectar()){
         //verifica se já existe cadastro nesse email
-            if ($aluno->cadastrar($rm,$nome,$email,$cpf)) {
+            if ($aluno->cadastrar($rm,$nome,$email,$cpf, $senha)) {
                 echo "<script>alert('Cadastro realizado com sucesso!'); window.location.href=index.html;</script>";
             } else {
                 echo "<script>alert('Erro ao cadastrar. Tente novamente.'); window.history.back();</script>";

@@ -5,6 +5,7 @@ class Aluno{
     private $nome;
     private $email;
     private $cpf;
+    private $senha;
     private $pdo;
 
 
@@ -37,6 +38,10 @@ class Aluno{
         return $this -> cpf;
     }
 
+    public function getSenha(){
+        return $this -> senha;
+    }
+
 
     public function setId(){
         $this->id = $id;
@@ -53,15 +58,19 @@ class Aluno{
     public function setCpf(){
         $this->cpf = $cpf;
     }
+    public function setSenha(){
+        $this->senha = $senha;
+    }
     
     
-    public function cadastrar($rm, $nome, $email, $cpf){
-        $sql = "INSERT INTO aluno (rm, nome, email, cpf) VALUES (:r, :n, :e, :c)";
+    public function cadastrar($rm, $nome, $email, $cpf,$senha){
+        $sql = "INSERT INTO aluno (rm, nome, email, cpf, senha) VALUES (:r, :n, :e, :c, :s)";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindValue(":r", $rm);
         $stmt->bindValue(":n", $nome);
         $stmt->bindValue(":e", $email);
         $stmt->bindValue(":c", $cpf);
+        $stmt->bindValue(":s", $senha);
         return $stmt->execute();
     }
 
